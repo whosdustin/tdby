@@ -9,4 +9,3 @@ collections:
     fields:
       - { label: "title", name: "title", widget: "string" }
       - { label: "body", name: "body", widget: "markdown" }
-      - { label: "video", name: "video", widget: "youtube" }
