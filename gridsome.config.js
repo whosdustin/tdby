@@ -6,7 +6,30 @@
 
 module.exports = {
   siteName: 'Gridsome',
-  plugins: [{
-    use: `gridsome-plugin-netlify-cms`
-  }]
+  plugins: [
+    {
+      // Create posts from markdown files
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Post',
+        path: 'blog/**/*.md',
+        route: '/:slug',
+        remark: {
+          // remark options
+        }
+      }
+    },
+    { use: `gridsome-plugin-netlify-cms` },
+    { 
+      use: 'gridsome-plugin-netlify-cms-paths',
+      options: {
+        contentTypes: ['Post'] // Same as declared above
+      }
+    }
+  ],
+  transformers: {
+    remark: {
+      // global remark options
+    }
+  }
 }
