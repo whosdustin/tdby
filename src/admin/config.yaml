@@ -1,0 +1,12 @@
+backend:
+  name: git-gateway
+  branch: master
+collections:
+  - name: "blogs"
+    label: "Blogs"
+    folder: "blog"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "title", name: "title", widget: "string" }
+      - { label: "body", name: "body", widget: "markdown" }
+      - { label: "video", name: "video", widget: "youtube" }
