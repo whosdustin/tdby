@@ -12,10 +12,12 @@ module.exports = {
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'Post',
-        path: 'blog/**/*.md',
-        route: '/:slug',
+        path: 'posts/**/*.md',
+        resolveAbsolutePaths: true,
         remark: {
-          // remark options
+          externalLinksTarget: "_blank",
+          externalLinksRel: ["nofollow", "noopener", "noreferrer"]
+
         }
       }
     },
