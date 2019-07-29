@@ -6,12 +6,5 @@
 
 module.exports = {
   siteName: 'Gridsome',
-  plugins: [],
-  css: {
-    loaderOptions: {
-      sass: {
-        indentedSyntax: true
-      }
-    }
-  }
+  plugins: []
 }
