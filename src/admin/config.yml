@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: whosdustin/tdby
   branch: master
 
 media_folder: 'static/uploads'
@@ -9,7 +10,8 @@ collections:
   - name: "posts"
     label: "Posts"
     folder: "posts"
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    create: true
+    slug: "{{slug}}"
     fields:
       - { label: "title", name: "title", widget: "string" }
       - { label: "body", name: "body", widget: "markdown" }
