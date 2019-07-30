@@ -11,9 +11,10 @@ module.exports = {
       // Create posts from markdown files
       use: '@gridsome/source-filesystem',
       options: {
-        typeName: 'BlogPost',
-        path: 'blog/**/*.md',
-        route: '/blog/:year/:month/:day/:slug'
+        typeName: 'Post',
+        baseDir: './content/posts',
+        path: '*.md',
+        route: '/blog/:slug'
       }
     },
     { use: `gridsome-plugin-netlify-cms` },
@@ -21,7 +22,7 @@ module.exports = {
       use: 'gridsome-plugin-netlify-cms-paths',
       options: {
         publicPah: '/admin',
-        contentTypes: ['BlogPost'] // Same as declared above
+        contentTypes: ['Post'] // Same as declared above
       }
     }
   ],
@@ -29,6 +30,9 @@ module.exports = {
     remark: {
       externalLinksTarget: '_blank',
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+      plugins: [
+        '@gridsome/remark-prismjs'
+      ]
     }
   }
 }
