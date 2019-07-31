@@ -1,13 +1,13 @@
 <template>
   <Layout>
     <g-link to="/" class="link">  &larr; Go Back</g-link>
-    <div class="post-title">
-      <h1>{{$page.post.title}}</h1>
-      <p class="post-date"> {{ $page.post.date}} | {{$page.post.timeToRead}} min read</p>
-      <p>Rating: {{ $page.post.rating}} | Heat: {{ $page.post.heat }} | Mess: {{ $page.post.mess }}</p>
+    <div class="eat-title">
+      <h1>{{$page.eat.title}}</h1>
+      <p class="eat-date"> {{ $page.eat.date}} | {{$page.eat.timeToRead}} min read</p>
+      <p>Rating: {{ $page.eat.rating}} | Heat: {{ $page.eat.heat }} | Mess: {{ $page.eat.mess }}</p>
     </div>
-    <div class="post-content">
-      <p v-html="$page.post.content" />
+    <div class="eat-content">
+      <p v-html="$page.eat.content" />
     </div>
   </Layout>
 </template>
@@ -34,7 +34,7 @@ export default {
   },
   metaInfo() {
     return {
-      title: this.$page.post.title
+      title: this.$page.eat.title
     }
   }
 }
