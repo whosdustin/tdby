@@ -13,14 +13,13 @@
 </template>
 
 <page-query>
-query Post ($path: String!) {
-  post: post (path: $path) {
+query Eat ($path: String!) {
+  eat: eat (path: $path) {
     title
     rating
     heat
     mess
     content
-    date (format: "D MMMM YYYY")
     timeToRead
   }
 }
