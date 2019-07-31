@@ -17,12 +17,21 @@ module.exports = {
         route: '/blog/:slug'
       }
     },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Eat',
+        baseDir: './content/eats',
+        path: '*.md',
+        route: '/eats/:slug'
+      }
+    },
     { use: `gridsome-plugin-netlify-cms` },
     { 
       use: 'gridsome-plugin-netlify-cms-paths',
       options: {
         publicPah: '/admin',
-        contentTypes: ['Post'] // Same as declared above
+        contentTypes: ['Post', 'Eat'] // Same as declared above
       }
     }
   ],

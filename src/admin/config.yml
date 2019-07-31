@@ -7,6 +7,17 @@ media_folder: 'static/uploads'
 public_folder: '/uploads'
 
 collections:
+  - name: "eats"
+    label: "Eats"
+    folder: "content/eats"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "title", name: "title", widget: "string" }
+      - { label: "rating", name: "rating", widget: "select", options: ["Bad", "Worth it", "Good"] }
+      - { label: "heat level", name: "heat", widget: "number", min: 0, max: 10, step: 1 }
+      - { label: "mess level", name: "mess", widget: "number", min: 0, max: 100, step: 1 }
+      - { label: "content", name: "content", widget: "markdown" }
   - name: "posts"
     label: "Posts"
     folder: "content/posts"
@@ -14,4 +25,5 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "title", name: "title", widget: "string" }
-      - { label: "body", name: "body", widget: "markdown" }
+      - { label: "description", name: "description", widget: "text" }
+      - { label: "content", name: "content", widget: "markdown" }

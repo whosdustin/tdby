@@ -6,7 +6,12 @@
     
     <h1>Hello, world!</h1>
    
-    <PostList v-for="edge in $page.allPost.edges" :key="edge.node.id" :post="edge.node" />
+    <PostList v-for="post in $page.allPost.edges" :key="post.node.id" :post="post.node" />
+
+    <h2>Tuck Darby Eats</h2>
+    <div v-for="eat in $page.allEat.edges" :key="eat.node.id" >
+      <h4>{{ eat.node.title }}</h4>
+    </div>
 
   </Layout>
 </template>
@@ -29,7 +34,13 @@ query {
         path
       }
     }
-
+  }
+  allEat {
+    edges {
+      node {
+        title
+      }
+    }
   }
 }
 </page-query>
