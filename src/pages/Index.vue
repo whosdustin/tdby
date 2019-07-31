@@ -8,9 +8,10 @@
    
     <PostList v-for="post in $page.allPost.edges" :key="post.node.id" :post="post.node" />
 
-    <h2>Tuck Darby Eats</h2>
+    <h1>Tuck Darby Eats</h1>
     <div v-for="eat in $page.allEat.edges" :key="eat.node.id" >
-      <h4>{{ eat.node.title }}</h4>
+      <h2>{{ eat.node.title }}</h2>
+      <g-link :to="eat.node.path" class="read">Read More...</g-link>
     </div>
 
   </Layout>
@@ -39,6 +40,7 @@ query {
     edges {
       node {
         title
+        path
       }
     }
   }
