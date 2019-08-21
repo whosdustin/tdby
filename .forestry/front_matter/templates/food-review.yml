@@ -1,0 +1,19 @@
+---
+label: Food Review
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: rating
+  label: rating
+- type: number
+  name: heat
+  label: heat
+- type: number
+  name: mess
+  label: mess
+- type: text
+  name: content
+  label: content
