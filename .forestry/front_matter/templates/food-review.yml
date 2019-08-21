@@ -4,16 +4,32 @@ hide_body: true
 fields:
 - type: text
   name: title
-  label: title
-- type: text
-  name: rating
-  label: rating
-- type: number
-  name: heat
-  label: heat
+  label: Title
+- name: rating
+  type: select
+  default: []
+  config:
+    required: true
+    options:
+    - Good
+    - Bad
+    - Worth it
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Rating
+- name: heat
+  type: number
+  label: Heat
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
 - type: number
   name: mess
-  label: mess
-- type: text
-  name: content
-  label: content
+  label: Mess
