@@ -13,18 +13,3 @@ export default {
   props: ["post"]
 };
 </script>
-
-<style>
-.line {
-  border: 0.5px solid #cdc8c5;
-  margin: 30px 0;
-}
-.date {
-  font-weight: 300;
-}
-.read {
-  padding: 7px;
-  color: #333;
-  text-decoration: none;
-}
-</style>

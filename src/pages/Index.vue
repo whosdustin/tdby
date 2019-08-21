@@ -1,10 +1,5 @@
 <template>
   <Layout>
-    
-    <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <g-image alt="Example image" src="~/favicon.png" width="135" />
-    
-    <h1>Hello, world!</h1>
    
     <PostList v-for="post in $page.allPost.edges" :key="post.node.id" :post="post.node" />
 
@@ -39,6 +34,7 @@ query {
   allEat {
     edges {
       node {
+        id
         title
         path
       }
@@ -59,9 +55,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.home-links a {
-  margin-right: 1rem;
-}
-</style>
