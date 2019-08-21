@@ -34,14 +34,6 @@ module.exports = {
   siteName: 'Tuck Darby',
   plugins: [
     ...filePlugins,
-    { use: `gridsome-plugin-netlify-cms` },
-    { 
-      use: 'gridsome-plugin-netlify-cms-paths',
-      options: {
-        publicPah: '/admin',
-        contentTypes: fileTypes
-      }
-    },
     {
       use: 'gridsome-plugin-tailwindcss',
       options: {
