@@ -33,3 +33,5 @@ fields:
 - type: number
   name: mess
   label: Mess
+pages:
+- content/eats/dinosaur-bbq.md
